@@ -47,6 +47,7 @@
   @include main-text;
   padding: 24px 17px;
   margin-bottom: 30px;
+  resize: none;
 }
 
 .appoint__form-btn {
@@ -90,4 +91,15 @@
   font-size: 19px;
   text-align: center;
   color: $white;
+}
+
+
+.form__select {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 224px;
+  height: 48px;
+  background-color: $grey;
+  @include main-text;
+  border: none;
 }

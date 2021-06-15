@@ -6,31 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/css/lity.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="shortcut icon" href="/src/icons/main_logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Car Service</title>
 </head>
 <body>
 
-  <div class="main">
+  <div class="main" id="main">
     <div class="container">
       <header class="main__header">
-        <a href="#" class="main__logo">
-          <img src="/src/icons/main_logo.svg" alt="">
-          <span class="logo__text">CAR SERVICE</span>
-        </a>
+        <div class="header__top">
+          <a href="#" class="main__logo">
+            <img src="/src/icons/main_logo.svg" alt="main logo" class="main-logo__img">
+            <span class="logo__text">CAR SERVICE</span>
+          </a>
+          <div class="header__info">
+            <div class="header__time">
+              <img src="/src/icons/access_time_24px.svg" alt="time icon" class="header__icon">
+              <div class="header__time-text">
+                <span>SERVICE HOURS</span>
+                <span>Mon - Sat: 7:00 am - 6:00 pm</span>
+              </div>
+            </div>
+            <div class="header__call">
+              <img src="/src/icons/phone_24px.svg" alt="phone icon" class="header__icon">
+              <div class="header__time-text">
+                <span>SERVICE HOURS</span>
+                <span>Mon - Sat: 7:00 am - 6:00 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+        
         <nav class="main__nav">
           <a href="#about" class="main__nav-link">Who we are</a>
           <a href="#promices" class="main__nav-link">Our promices</a>
           <a href="#services" class="main__nav-link">Our services</a>
           <a href="#form" class="main__nav-link">Form</a>
-          <a href="#gallery" class="main__nav-link">Gallery</a>
-          <a href="#map" class="main__nav-link">Map</a>
+          <a href="#gallery" class="main__nav-link">Live Stream</a>
           <a href="#contact" class="main__nav-link">Contact</a>
         </nav>
         <h1 class="main__title">Top notch service is our main auto motive</h1>
         <button type="submit" class="main__btn">Make an Appointment</button>
+        
       </header>
       
     </div>
@@ -164,26 +185,30 @@
     <div class="form" id="form">
       <div class="container">
         <div class="form__wrapper">
-          <form action="" class="appoint__form">
+          <form method="POST" action="#" class="appoint__form">
             <h3 class="appoint__form-title title">Make an appointment</h3>
             <div class="appoint__form-wrapper">
-              <input type="text" name="name"  placeholder="Name" class="appoint__form-input">
-              <input type="email" name="email"  placeholder="Email" class="appoint__form-input">
-              <input type="tel" name="phone" placeholder="Phone number" class="appoint__form-input">
-              <select name="select"  placeholder="Select Service" class="appoint__form-input">Select Service</select>
-              <textarea name="" cols="30" rows="10" placeholder="Tell us about the car needing service(s)" class="appoint__form-textarea"></textarea>
+              <input type="text" name="name" maxlength="256" required placeholder="Name" class="appoint__form-input">
+              <input type="email" name="email" maxlength="256" required placeholder="Email" class="appoint__form-input">
+              <input type="tel" name="phone" required maxlength="12" placeholder="Phone number" class="appoint__form-input">
+
+             <select name="service" class="form__select">
+              <option value="size">Select Service</option>
+              <option value="1">Multi Point Inspections</option>
+              <option value="2">Auto Maintenance</option>
+              <option value="3">Auto Repair</option>
+              <option value="4">Tires</option>
+              <option value="5">Service Warranty</option>
+           </select>
+
+              <textarea name="textarea" cols="30" rows="10" maxlength="256" placeholder="Tell us about the car needing service(s)" class="appoint__form-textarea"></textarea>
               <button type="submit" class="appoint__form-btn">Make an Appointment</button>
             </div>
           </form>
           <div class="form__text">
             <div class="form__text-title">Maxime placeat facere possimus omnis </div>
-            <!-- <div class="counters">
-              <div class="counter" data-target="17">0</div>
-            </div> -->
-            <!-- <div class="counter-wrap">
-              <div class="box number" data-target="17">0</div>
-            </div> -->
-            <div class="counter" data-count="17">0<span>k+</span> </div>
+            
+            <div class=" counter" data-count="1700" id="counter2">0</div>
             <div class="form__text-subtitle">customers served (and counting)</div>
           </div>
         </div>
@@ -247,51 +272,8 @@
       <div class="container">
         <div class="customers__marker">OUR CUSTOMERS</div>
         <div class="customers__wrapper">
-          <div class="customers__title">Illum qui dolorem eum quo voluptas ut distinctio</div>
-          
-          
-          
-          <!-- <div class="owl-carousel owl-theme owl-loaded">
-            <div class="slide slide-1 ">
-              <div class="slide__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. Ut enim illum ad minim veniam, quis ea exercitation ullamco cillum ut enim dolore.”</div>
-              <div class="slide__author">
-                <div class="slide__author-img">
-                  <img src="/src/images/Ellipse-1.png" alt="man photo">
-                </div>
-                <div class="slide__author-name">Cullen Bohannon</div>
-              </div>
-            </div>
-            <div class="slide slide-2 ">
-              <div class="slide__text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ipsam voluptatem aspernatur.”</div>
-              <div class="slide__author">
-                <div class="slide__author-img">
-                  <img src="/src/images/Ellipse-2.png" alt="woman photo">
-                </div>
-                <div class="slide__author-name">Jennifer Thomas</div>
-              </div>
-            </div>
-            <div class="slide slide-3 ">
-              <div class="slide__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. Ut enim illum ad minim veniam, quis ea exercitation ullamco cillum ut enim dolore.”</div>
-              <div class="slide__author">
-                <div class="slide__author-img">
-                  <img src="/src/images/Ellipse-1.png" alt="man photo">
-                </div>
-                <div class="slide__author-name">Cullen Bohannon</div>
-              </div>
-            </div>
-            <div class="slide slide-4 ">
-              <div class="slide__text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ipsam voluptatem aspernatur.”</div>
-              <div class="slide__author">
-                <div class="slide__author-img">
-                  <img src="/src/images/Ellipse-2.png" alt="woman photo">
-                </div>
-                <div class="slide__author-name">Jennifer Thomas</div>
-              </div>
-            </div>
-          </div> -->
-
-
-          <!-- Slider main container -->
+          <div class="customers__title title">Illum qui dolorem eum quo voluptas ut distinctio</div>
+      <!-- Slider main container -->
           <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -338,8 +320,6 @@
             <div class="swiper-button-next"></div>
 
           </div>
-
-
         </div>
       </div>
     </div>
@@ -349,17 +329,17 @@
     <div class="impact">
       <div class="container">
         <div class="impact__marker">OUR IMPACT</div>
-        <div class="impact__title">Nemo enim ipsam voluptatem quia voluptas</div>
+        <div class="impact__title title">Nemo enim ipsam voluptatem quia voluptas</div>
         <div class="impact__img">
           <img src="/src/images/photo-28.jpg" alt="red car">
         </div>
-        <div class="impact__counter">
+        <div class="impact__counter" id="counter">
           <div class="impact__counter-item">
             <div class="impact__counter-img">
               <img src="/src/icons/car_oil-24x.svg" alt="oil icon">
             </div>
             <div class="impact__counter-text">
-              <div class="impact__counter-number counter" data-count="1600">0</div>
+              <div class="impact__counter-number" data-count="1600">0</div>
               <div class="impact__counter-descr">Oil changes</div>
             </div>
           </div>
@@ -369,7 +349,7 @@
               <img src="/src/icons/car_transmission_24x.svg" alt="transmition icon">
             </div>
             <div class="impact__counter-text">
-              <div class="impact__counter-number counter" data-count="1300">0</div>
+              <div class="impact__counter-number" data-count="1300">0</div>
               <div class="impact__counter-descr">Transmission repairs</div>
             </div>
           </div>
@@ -378,7 +358,7 @@
               <img src="/src/icons/car_alignment_24x.svg" alt="align icon">
             </div>
             <div class="impact__counter-text">
-              <div class="impact__counter-number counter" data-count="1500">0</div>
+              <div class="impact__counter-number" data-count="1500">0</div>
               <div class="impact__counter-descr">Alignments made</div>
             </div>
           </div>
@@ -387,30 +367,148 @@
               <img src="/src/icons/car_engine_2_24x.svg" alt="engine icon">
             </div>
             <div class="impact__counter-text">
-              <div class="impact__counter-number counter" data-count="3000">0</div>
+              <div class="impact__counter-number" data-count="3000">0</div>
               <div class="impact__counter-descr">Engines repaired</div>
             </div>
           </div>
         </div>
-
-        
       </div>
 
-      <div class="impact__accordeon">
-        <div class="impact__accordeon-wrapper">
-          <div class="impact__accordeon-title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
-          <div class="impact__accordeon-arrow"><i class="fas fa-chevron-down"></i></div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              SECRET information for our customers
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Thank you for visiting our page. GOOD LUCK!
+              <img src="/src/icons/smile.svg" width="35" height="35" alt="smile icon">
+            </div>
+          </div>
         </div>
+      </div>
+
     </div>
+
+
+    <div id="map"></div>
+    
+
+    <footer class="main__footer" id="contact">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="logo">
+            <a href="#" class="footer__logo">
+              <img src="/src/icons/main_logo.svg" alt="main logo">
+              <span class="logo__text">CAR SERVICE</span>
+            </a>
+            <div class="footer__text">This is a blurb about the company sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. </div>
+            <div class="footer__social">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="links">
+            <div class="links__title">EXPLORE LINKS</div>
+            <ul class="links__list">
+              <li class="links__items">
+                <a href="#">About</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Services</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Special</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Estimates</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Reviews</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Shop</a>
+              </li>
+              <li class="links__items">
+                <a href="#">Career</a>
+              </li>
+              <li class="links__items">
+                <a href="#">FAQs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact" >
+            <div class="contact__title">CONTACT</div>
+            <ul class="contact__list">
+              <li class="contact__items">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="#map" class="cordinates">321 Pikes Place Parkway
+                Seattle, WA 54321</a>
+              </li>
+              <li class="contact__items">
+                <i class="fas fa-mobile-alt"></i>
+                <a href="tel:5557654321">(555) 765-4321</a>
+              </li>
+              <li class="contact__items">
+                <i class="far fa-envelope"></i>
+                <a href="mailto:info@company.com">Info@company.com</a>
+              </li>
+              <li class="contact__items">
+                <i class="far fa-clock"></i>
+                <a href="https://calendar.google.com/" target="_blank">Mon - Sat:  7:000 am - 6:00 pm</a>
+              </li>              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer-btn" href="#main"><i class="fas fa-chevron-up"></i></a>
+
+    </footer>
+
+    <div class="footer__copyright">
+      <div class="container">
+        <div class="copyright__text">
+          <div class="copyright-left">Tagline lorem ipsum dolor sit amet, consectetur adipiscing eiusmod</div>
+          <div class="copyright-right">© 2018 Company.   Privacy Policy | Terms & Conditions</div>
+        </div>
+      </div>
     </div>
+
+
+
+
+      
+
+
+     
+      
+
+
+   
+
+      
+
+   
+
+    
+    
+
+      
 
     
 		
 
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/src/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8487242f69.js" crossorigin="anonymous"></script> 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -421,5 +519,8 @@
     <script src="/src/js/counter.js"></script>
     <script src="/src/js/gsap.js"></script>
     <script src="/src/js/scroll.js"></script>
+    <script src="/src/js/accordeon.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQh8p-uU6pg8nZuDdwCnUxER6QZa8NdiM&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="/src/js/map.js"></script>
 </body>
 </html>

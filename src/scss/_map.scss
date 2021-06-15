@@ -1,0 +1,7 @@
+#map {
+  height: 500px;
+  max-width: 1000px;
+  @include mx-auto;
+  border: 15px solid $secondary;
+  margin-top: 150px;
+}

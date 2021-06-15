@@ -1,42 +1,63 @@
-// const counters = document.querySelector('.counter');
-// const speed = 600;
+var a = 0;
+$(window).scroll(function() {
 
-// counters.forEach(counter => {
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.impact__counter-number').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
 
-//   const updateCount = () => {
-//   const target = +counter.getAttribute('data-target');
-//   const count = +counter.innerText;
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+        });
+    });
+  }
 
-//   const inc = target / speed;
 
-//     if (count < target) {
-//       counter.innerText = count + inc;
-//       setTimeout(updateCount, 1)
-//     } else {
-//       count.innerText = target;
-//     }
-
-//   }
-//   updateCount();
-// });
-
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-
-  {
-    duration: 2000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
+  var b = 0;
+  var oTop2 = $('#counter2').offset().top - window.innerHeight;
+  if(b == 0 && $(window).scrollTop() > oTop2)
+  $('.counter').each(function() {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+    
+    $({ countNum: $this.text()}).animate({
+      countNum: countTo
     },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
-  });  
+
+    {
+      duration: 2000,
+      easing:'swing',
+      step: function() {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $this.text(this.countNum);
+        //alert('finished');
+      }
+    });  
 });
+
+
+
+});
+
+
+
+
+
+
+

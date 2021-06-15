@@ -1,7 +1,7 @@
 .services {
   padding-top: 110px;
   padding-bottom: 122px;
-  min-height: 1220px;
+  max-height: 1220px;
   width: 100%;
   background: url(/src/images/services-bg.png) center center / cover no-repeat;
 }
@@ -36,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   &:hover {
-    transform:scale(105%);
+    transform: scale(105%);
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
     transition: all 0.4s ease-in-out;
     cursor: pointer;
