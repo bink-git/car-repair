@@ -1,0 +1,67 @@
+.main {
+  width: 100%;
+  min-height: 800px;
+  background: url(/src/images/Heroshot-1.jpg) center center/cover no-repeat;
+  padding-top: 26px;
+}
+
+.main__title {
+  @include RBlack;
+  font-size: 56px;
+  line-height: 56px;
+  color: $white;
+  max-width: 590px; 
+  margin-bottom: 46px;
+}
+
+.main__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  max-width: 200px;
+  margin-bottom: 27px;
+}
+
+.logo__text {
+  @include RBlack;
+  font-size: 24px;
+  color: $white;
+}
+
+.main__nav {
+  max-width: 1020px;
+  height: 60px;
+  background-color: $white;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &-link {
+    @include RBlack;
+    font-size: 16px;
+    line-height: 22px;
+    color: $secondary;
+    text-decoration: none;
+    margin: 20px;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.main__btn {
+  @include btn;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url(/src/icons/arrow_forward_24px.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+  }
+}

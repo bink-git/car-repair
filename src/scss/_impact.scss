@@ -1,0 +1,81 @@
+.impact {
+  max-height: 608px;
+  background: url(/src/images/impact-bg.jpg) center center / cover no-repeat;
+  padding: 112px 20px 212px;
+  position: relative;
+}
+.impact__marker {
+  @include marker;
+  color: $white;
+}
+
+.impact__title {
+  @include title;
+  color: $white;
+  max-width: 420px;
+  margin-bottom: 80px;
+}
+
+.impact__img {
+  position: absolute;
+  right: 0;
+  bottom: 160px;
+}
+.impact__counter {
+  display: flex;
+  justify-content: space-between;
+}
+.impact__counter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.impact__counter-img {
+  margin-right: 20px;
+}
+.impact__counter-text {
+  display: flex;
+  flex-direction: column;
+}
+.impact__counter-number {
+  @include RBold;
+  color: $primary;
+  font-size: 36px;
+}
+.impact__counter-descr {
+  @include main-text;
+  color: $white;
+}
+
+
+.impact__accordeon {
+  max-width:1020px;
+  height: 100px;
+  background-color:$white;
+  box-sizing: border-box;
+  padding: 22px 70px;
+  @include mx-auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5%;
+
+}
+.impact__accordeon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.impact__accordeon-title {
+  @include RBold;
+  font-size: 24px;
+  max-width: 560px;
+}
+
+.fa-chevron-down {
+  font-size: 40px;
+  &:hover {
+    color: $primary;
+    cursor: pointer;
+  }
+}

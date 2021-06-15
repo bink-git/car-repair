@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: local("/fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+ }
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: local("/fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+ }
+
+@font-face {
+  font-family: "Roboto Black";
+  src: local("/fonts/Roboto/Roboto-Black.ttf") format("ttf");
+ }
+
+
+//  --------------------------------------- VARIBLES -------------------------------------------------
+
+// colors
+$white: #ffffff;
+$grey: #F5F5F5;
+$black: #000000;
+$primary: #C40B0B;
+$secondary: #02133C;
+$accentRed: #E30B0B;
+$main-text: #4B4B4B;
+
+//variables width
+$w100: 100%;
+$slick-dot-size: 10px;
+$slick-dot-color-active: $white;
+$slick-dot-color: $white;
+
+//  ------------------------ MIXINS --------------------------------------------------------
+@mixin RRegular {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+@mixin RBlack {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+@mixin RBold {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+@mixin mx-auto {
+	margin: 0 auto;
+}
+
+@mixin btn {
+	width: 210px;
+	height: 50px;
+	background: linear-gradient(115deg, rgba(196,11,11,1) 0%, rgba(196,11,11,1) 77%, rgba(227,11,11,1) 77%, rgba(227,11,11,1) 100%); 
+	@include RBold;
+	font-size: 12px;
+	color: $white;
+	border: none;
+	text-transform: uppercase;
+	padding: 20px;
+	text-align: left;
+	cursor: pointer;
+	position: relative;
+  &::after {
+    content: "";
+    background-image: url(/src/icons/arrow_forward_24px.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+  }
+	&:hover {
+		background-position: -210px 0px;
+		transition: all .5s ease-in-out;
+	}
+}
+
+@mixin title {
+	max-width: 580px;
+	@include RBlack;
+	font-size: 36px;
+	color: $secondary;
+}
+
+@mixin title-small {
+	@include RBlack;
+	font-size: 19px;
+	line-height: 26px;
+	text-align: left;
+	color: $secondary;
+	margin-bottom: 20px;
+}
+
+@mixin main-text {
+	@include RRegular;
+	color: $main-text;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15;
+	text-align: left;
+}
+
+@mixin marker {
+	@include RBold;
+	color: $main-text;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 2.5px;
+	text-align: left;
+	text-transform: uppercase;
+  margin-bottom: 33px;
+	margin-left: 30px;
+	position: relative;
+	&::before {
+    content: "";
+    background: url(/src/icons/Overline-Mark.svg) no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -35px;
+  }
+	
+}
+
+
+
+
+//---------------------------------- STYLES ----------------------------------------------
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $grey;
+}
+
+.container {
+  max-width: 1020px;
+  @include mx-auto;
+  // border: 1px solid red;
+	position: relative;
+}
+
+
