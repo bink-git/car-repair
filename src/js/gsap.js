@@ -217,3 +217,58 @@ gsap.from(".main__footer", {
   opacity: 0.3,
   stagger: 0.5
 });
+
+gsap.from(".about__marker", {
+  scrollTrigger: {
+    trigger: ".about__marker",
+    toggleActions: "restart none none none"
+  },
+  duration: 2, 
+  x: -80, 
+  opacity: 0, 
+  scale: 0.8
+});
+
+gsap.from(".promices__marker", {
+  scrollTrigger: {
+    trigger: ".promices__marker",
+    toggleActions: "restart none none none"
+  },
+  duration: 2, 
+  x: -80, 
+  opacity: 0, 
+  scale: 0.8
+});
+
+gsap.from(".services__marker", {
+  scrollTrigger: {
+    trigger: ".services__marker",
+    toggleActions: "restart none none none"
+  },
+  duration: 2, 
+  x: -80, 
+  opacity: 0, 
+  scale: 0.8
+});
+
+gsap.from(".gallery__marker", {
+  scrollTrigger: {
+    trigger: ".gallery__marker",
+    toggleActions: "restart none none none"
+  },
+  duration: 2, 
+  x: -80, 
+  opacity: 0, 
+  scale: 0.8
+});
+
+gsap.from(".customers__marker", {
+  scrollTrigger: {
+    trigger: ".customers__marker",
+    toggleActions: "restart none none none"
+  },
+  duration: 2, 
+  x: -80, 
+  opacity: 0, 
+  scale: 0.8
+});

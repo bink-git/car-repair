@@ -1,4 +1,4 @@
-const styles = [
+var styles = [
   {
     "elementType": "geometry",
     "stylers": [
@@ -240,8 +240,8 @@ function initMap() {
 
   let marker, info, content;
   
-  const element = document.getElementById('map');
-  const map = new google.maps.Map(element, {
+  var element = document.getElementById('map');
+  var map = new google.maps.Map(element, {
     zoom: 15,
     center: coordinates,
 		styles: styles,
