@@ -8,7 +8,9 @@
     "build": "gulp",
     "build:html": "gulp html",
     "build:sass": "gulp sass",
-    "build:watch": "gulp watch"
+    "build:watch": "gulp watch",
+    "build:imagemin": "gulp imagemin",
+    "build:uglify": "gulp uglify"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,9 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-livereload": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1",
     "sass": "^1.34.0"
   }

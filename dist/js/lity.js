@@ -1,0 +1,1 @@
+$(document).on("click","[data-lightbox]",lity);
