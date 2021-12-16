@@ -239,12 +239,12 @@ let coordinates = {
 function initMap() {
 
   let marker, info, content;
-  
+
   var element = document.getElementById('map');
   var map = new google.maps.Map(element, {
     zoom: 15,
     center: coordinates,
-		styles: styles,
+    styles: styles,
   });
 
   marker = new google.maps.Marker({
@@ -255,30 +255,29 @@ function initMap() {
     title: `Car Service`,
   });
 
-  
-	info = new google.maps.InfoWindow({			
-		content: content,          				
-	});										   
 
-	marker.addListener("click", () => {	
-		info.open(map, marker);                   
-	});	
+  info = new google.maps.InfoWindow({
+    content: content,
+  });
+
+  marker.addListener("click", () => {
+    info.open(map, marker);
+  });
 }
 
 
 $(document).ready(function () {
-		
-    $('.cordinates').click(function () {
-			coordinates = {
-				lat: 47.6097488,
-				lng: -122.3392812,                 //new-york
-			};
-			initMap() ;
-		})
-	
-	});
+
+  $('.cordinates').click(function () {
+    coordinates = {
+      lat: 47.6097488,
+      lng: -122.3392812,                 //new-york
+    };
+    initMap();
+  })
+
+});
 
 
 
 
- 
