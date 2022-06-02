@@ -1147,14 +1147,13 @@ html, body {
 }
 
 .swiper-container {
-  width: 300px;
+  width: 100%;
   height: 400px;
-  position: absolute;
   overflow: hidden;
 }
 
 .swiper-wrapper {
-  max-width: 300px;
+  width: 100%;
 }
 
 .swiper-button-next,

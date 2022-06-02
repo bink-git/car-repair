@@ -1,5 +1,6 @@
 .customers {
   min-height: 550px;
+  position: relative;
 }
 
 .customers__marker {
@@ -32,11 +33,9 @@
 .slide__author {
   display: flex;
   align-items: center;
-
 }
 .slide__author-img {
   margin-right: 17px;
-
 }
 .slide__author-name {
   @include RBold;
